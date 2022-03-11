@@ -2,6 +2,6 @@ import { Module } from '@nestjs/common';
 import { QueryController } from './query.controller';
 
 @Module({
-  controllers: [QueryController]
+  controllers: [QueryController],
 })
 export class QueryModule {}
