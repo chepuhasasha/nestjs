@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import { prop } from '@typegoose/typegoose';
+import { Types } from 'mongoose';
 import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 
-class ObjectProp {
+export class ObjectProp {
   @prop()
   name: string;
   @prop()
@@ -30,4 +31,7 @@ export class QueryModel extends TimeStamps {
 
   @prop()
   doc: string;
+
+  @prop()
+  project_id: Types.ObjectId;
 }

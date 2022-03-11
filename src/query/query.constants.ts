@@ -1,0 +1,1 @@
+export const QUERY_NOT_FOUND = 'QUERY NOT FOUND';
