@@ -12,7 +12,7 @@ import { QueryModel } from './query.model';
 @Controller('query')
 export class QueryController {
   @Post('create')
-  async create(@Body() dto: Omit<QueryModel, 'id'>) {
+  async create(@Body() dto: Omit<QueryModel, '_id'>) {
     return;
   }
 

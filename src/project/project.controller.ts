@@ -13,7 +13,7 @@ import { ProjectModel } from './project.model';
 @Controller('project')
 export class ProjectController {
   @Post('create')
-  async create(@Body() dto: Omit<ProjectModel, 'id'>) {
+  async create(@Body() dto: Omit<ProjectModel, '_id'>) {
     return;
   }
 
