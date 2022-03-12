@@ -38,12 +38,15 @@ export class QueryService {
   async findById(id: string): Promise<DocumentType<QueryModel>> {
     return this.queryModel.findById(id).exec();
   }
+
   async patch(
     id: string,
     dto: CreateQueryDTO,
   ): Promise<DocumentType<QueryModel>> {
     return this.queryModel
-      .findOneAndUpdate({ _id: new Types.ObjectId(id) }, dto)
+      .findOneAndUpdate({ _id: new Types.ObjectId(id) }, dto, {
+        new: true,
+      })
       .exec();
   }
 }
